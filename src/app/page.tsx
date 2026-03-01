@@ -8,6 +8,7 @@ import OpenSource from "@/components/OpenSource";
 import Education from "@/components/Education";
 import Languages from "@/components/Languages";
 import ThemeToggle from "@/components/ThemeToggle";
+import DownloadButton from "@/components/DownloadButton";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <ThemeToggle />
+      <DownloadButton />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <Header profile={cvData.profile} />
         <ScrollReveal>
