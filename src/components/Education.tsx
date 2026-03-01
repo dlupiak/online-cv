@@ -8,10 +8,10 @@ export default function Education({
 }) {
   return (
     <Section title="Education">
-      <ul className="space-y-3">
+      <ul className="space-y-2">
         {education.map((e) => (
           <li key={e.degree} className="text-gray-700 dark:text-gray-300 list-item-hover flex items-start gap-2">
-            <span className="text-lg shrink-0">🎓</span>
+            <span className="shrink-0">🎓</span>
             <div>
               <span className="font-medium">{e.degree}</span> &mdash; {e.field}
               <br />
