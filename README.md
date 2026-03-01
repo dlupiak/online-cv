@@ -1,1 +1,0 @@
-[Online CV](dimalupyak.github.io/online-cv)
