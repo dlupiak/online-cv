@@ -11,10 +11,10 @@ export default function Skills({ skills }: { skills: SkillCategory[] }) {
               {cat.category}
             </h3>
             <div className="flex flex-wrap gap-1.5">
-              {cat.skills.map((skill) => (
+              {cat.skills.map((skill, i) => (
                 <span
                   key={skill}
-                  className="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs text-gray-700 dark:text-gray-300"
+                  className={`pill-hover rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs text-gray-700 dark:text-gray-300 cursor-default stagger-${Math.min(i + 1, 8)}`}
                 >
                   {skill}
                 </span>

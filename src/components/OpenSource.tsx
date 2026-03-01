@@ -10,7 +10,7 @@ export default function OpenSource({
     <Section title="Open Source">
       <ul className="space-y-2">
         {projects.map((p) => (
-          <li key={p.name}>
+          <li key={p.name} className="list-item-hover">
             <a
               href={p.url}
               target="_blank"

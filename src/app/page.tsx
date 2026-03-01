@@ -9,6 +9,7 @@ import Education from "@/components/Education";
 import Languages from "@/components/Languages";
 import ThemeToggle from "@/components/ThemeToggle";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
@@ -16,13 +17,27 @@ export default function Home() {
       <ThemeToggle />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <Header profile={cvData.profile} />
-        <Summary text={cvData.profile.summary} />
-        <Skills skills={cvData.skills} />
-        <Experience experience={cvData.experience} />
-        <Achievements achievements={cvData.achievements} />
-        <OpenSource projects={cvData.openSource} />
-        <Education education={cvData.education} />
-        <Languages languages={cvData.languages} />
+        <ScrollReveal>
+          <Summary text={cvData.profile.summary} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Skills skills={cvData.skills} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Experience experience={cvData.experience} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Achievements achievements={cvData.achievements} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <OpenSource projects={cvData.openSource} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Education education={cvData.education} />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Languages languages={cvData.languages} />
+        </ScrollReveal>
         <Footer />
       </main>
     </>
