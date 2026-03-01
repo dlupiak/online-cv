@@ -1,6 +1,6 @@
 import { cvData } from "@/data/cv-data";
 import Header from "@/components/Header";
-import Summary from "@/components/Summary";
+import Typewriter from "@/components/Typewriter";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
@@ -15,10 +15,10 @@ export default function Home() {
   return (
     <>
       <ThemeToggle />
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12 relative z-10">
         <Header profile={cvData.profile} />
         <ScrollReveal>
-          <Summary text={cvData.profile.summary} />
+          <Typewriter text={cvData.profile.summary} />
         </ScrollReveal>
         <ScrollReveal>
           <Skills skills={cvData.skills} />

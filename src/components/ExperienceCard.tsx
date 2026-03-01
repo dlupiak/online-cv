@@ -1,4 +1,5 @@
 import { Experience as ExperienceType } from "@/types/cv";
+import TiltCard from "./TiltCard";
 
 export default function ExperienceCard({
   exp,
@@ -8,17 +9,17 @@ export default function ExperienceCard({
   isFirst?: boolean;
 }) {
   return (
-    <div className="relative pl-7 mb-8">
+    <div className="relative pl-8 mb-8">
       {/* Timeline dot */}
       <div
-        className={`timeline-dot absolute left-[-5px] top-1.5 ${isFirst ? "timeline-dot-pulse" : ""}`}
+        className={`timeline-dot absolute left-[-6px] top-2 ${isFirst ? "timeline-dot-pulse" : ""}`}
       />
-      <div className="card-hover rounded-lg p-4 -m-4">
+      <TiltCard className="rounded-xl p-5 bg-white/50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 glow-border">
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
             {exp.project}
           </h3>
-          <span className="text-sm text-gray-500 dark:text-gray-400 shrink-0">
+          <span className="text-sm text-gray-500 dark:text-gray-400 shrink-0 font-mono">
             {exp.duration}
           </span>
         </div>
@@ -43,7 +44,7 @@ export default function ExperienceCard({
             </span>
           ))}
         </div>
-      </div>
+      </TiltCard>
     </div>
   );
 }
